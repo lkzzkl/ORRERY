@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: 单元测试（确定性、夹取规则、SVG 安全自检）
+        run: npm test
+
+      - name: 页面装配烟雾测试（验证双击即开）
+        run: npm run smoke
+
+      - name: 重新生成内置海报
+        run: npm run posters
+
+      - name: 校验海报与源码一致（同参数必须同产物）
+        run: git diff --exit-code -- assets/posters/
+
+      - name: 校验零外部素材声明
+        run: node scripts/check-assets.mjs

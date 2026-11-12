@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" role="img" aria-labelledby="orrery-title orrery-desc">
+<title id="orrery-title">ORRERY / 星图 — 无色高对比</title>
+<desc id="orrery-desc">参数化星系编排海报，4 条轨道，14 颗星体。配色：无色高对比。ORBITS 4 / ECC 0.62 / DENSITY 0.35 / TILT 36 / PALETTE 2 / SEED 3096856740</desc>
+<metadata>ORBITS 4 / ECC 0.62 / DENSITY 0.35 / TILT 36 / PALETTE 2 / SEED 3096856740</metadata>
+<rect x="0" y="0" width="1200" height="1200" fill="#0a0a0a"/>
+<circle cx="600" cy="600" r="548" fill="none" stroke="#1b1b1b" stroke-width="1"/>
+<line x1="1112" y1="600" x2="1136" y2="600" stroke="#8f8f8f" stroke-width="2" opacity="0.75"/>
+<line x1="1094.55" y1="732.52" x2="1105.18" y2="735.36" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="1043.41" y1="856" x2="1052.93" y2="861.5" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="962.04" y1="962.04" x2="969.82" y2="969.82" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="856" y1="1043.41" x2="861.5" y2="1052.93" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="732.52" y1="1094.55" x2="735.36" y2="1105.18" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="600" y1="1112" x2="600" y2="1136" stroke="#8f8f8f" stroke-width="2" opacity="0.75"/>
+<line x1="467.48" y1="1094.55" x2="464.64" y2="1105.18" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="344" y1="1043.41" x2="338.5" y2="1052.93" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="237.96" y1="962.04" x2="230.18" y2="969.82" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="156.59" y1="856" x2="147.07" y2="861.5" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="105.45" y1="732.52" x2="94.82" y2="735.36" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="88" y1="600" x2="64" y2="600" stroke="#8f8f8f" stroke-width="2" opacity="0.75"/>
+<line x1="105.45" y1="467.48" x2="94.82" y2="464.64" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="156.59" y1="344" x2="147.07" y2="338.5" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="237.96" y1="237.96" x2="230.18" y2="230.18" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="344" y1="156.59" x2="338.5" y2="147.07" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="467.48" y1="105.45" x2="464.64" y2="94.82" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="600" y1="88" x2="600" y2="64" stroke="#8f8f8f" stroke-width="2" opacity="0.75"/>
+<line x1="732.52" y1="105.45" x2="735.36" y2="94.82" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="856" y1="156.59" x2="861.5" y2="147.07" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="962.04" y1="237.96" x2="969.82" y2="230.18" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="1043.41" y1="344" x2="1052.93" y2="338.5" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<line x1="1094.55" y1="467.48" x2="1105.18" y2="464.64" stroke="#8f8f8f" stroke-width="1" opacity="0.4"/>
+<ellipse cx="600" cy="600" rx="209.15" ry="115.79" fill="none" stroke="#8f8f8f" stroke-width="1.4" opacity="0.62" transform="rotate(-13.04 600 600)"/>
+<ellipse cx="600" cy="600" rx="296.1" ry="163.92" fill="none" stroke="#8f8f8f" stroke-width="1.4" opacity="0.62" transform="rotate(-7.75 600 600)"/>
+<ellipse cx="600" cy="600" rx="383.05" ry="212.06" fill="none" stroke="#8f8f8f" stroke-width="1.4" opacity="0.62" transform="rotate(3.29 600 600)"/>
+<ellipse cx="600" cy="600" rx="470" ry="260.19" fill="none" stroke="#8f8f8f" stroke-width="1.4" opacity="0.62" transform="rotate(17.31 600 600)"/>
+<circle cx="600" cy="600" r="52" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.35"/>
+<circle cx="600" cy="600" r="15" fill="#ffffff"/>
+<g>
+<circle cx="805.4" cy="565.81" r="5.03" fill="#ffffff"/>
+<circle cx="530.85" cy="721.94" r="7.4" fill="#a8a8a8"/>
+<circle cx="441.04" cy="550.45" r="5.97" fill="#d0d0d0"/>
+<circle cx="441.04" cy="550.45" r="14.97" fill="none" stroke="#c9c9c9" stroke-width="1" opacity="0.7"/>
+<circle cx="882.05" cy="526.57" r="5.73" fill="#d0d0d0"/>
+<circle cx="440.98" cy="753.71" r="5.69" fill="#a8a8a8"/>
+<circle cx="427.62" cy="482.48" r="4.36" fill="#ffffff"/>
+<circle cx="981.07" cy="596.17" r="10.36" fill="#d0d0d0"/>
+<circle cx="545.41" cy="807.95" r="10.19" fill="#d0d0d0"/>
+<circle cx="545.41" cy="807.95" r="19.19" fill="none" stroke="#c9c9c9" stroke-width="1" opacity="0.7"/>
+<circle cx="227.57" cy="536.51" r="5.49" fill="#ffffff"/>
+<circle cx="669.73" cy="394.03" r="6.28" fill="#d0d0d0"/>
+<circle cx="1052.53" cy="724.79" r="7.09" fill="#ffffff"/>
+<circle cx="629.71" cy="874.23" r="5.22" fill="#d0d0d0"/>
+<circle cx="147.97" cy="472.79" r="9.3" fill="#d0d0d0"/>
+<circle cx="724.35" cy="367.74" r="3.46" fill="#a8a8a8"/>
+</g>
+<text x="72" y="96" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="46" letter-spacing="12">ORRERY</text>
+<text x="74" y="132" fill="#c9c9c9" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="19" letter-spacing="4">STAR CHART / 星图</text>
+<line x1="72" y1="1098" x2="1128" y2="1098" stroke="#8f8f8f" stroke-width="1" opacity="0.5"/>
+<text x="72" y="1136" fill="#ffffff" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" letter-spacing="1">ORBITS 4 / ECC 0.62 / DENSITY 0.35 / TILT 36 / PALETTE 2 / SEED 3096856740</text>
+<text x="1128" y="1136" text-anchor="end" fill="#c9c9c9" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18">无色高对比 / 14 STARS</text>
+</svg>

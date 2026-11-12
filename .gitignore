@@ -1,0 +1,23 @@
+# 无构建步骤，故无 dist/；保留此文件以防贡献者引入工具链
+node_modules/
+dist/
+build/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# 日志与临时文件
+*.log
+*.tmp
+.env
+.env.local
+
+# 玩家导出的海报与预设不应提交进仓库
+exports/
+orrery-preset.json
+
+# 注意：assets/posters/*.svg 是内置示例，必须提交，不在此忽略

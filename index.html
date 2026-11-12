@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ORRERY / 星图：无胜负的星系编排玩具，调参、观察，并把成果导出成一张矢量海报。">
+  <meta name="color-scheme" content="light">
+  <title>ORRERY / 星图 — 参数化星系编排</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#controls">跳到参数控件</a>
+
+  <header class="masthead">
+    <h1>ORRERY <span class="masthead-cn">星图</span></h1>
+    <p class="tagline">一款无胜负的星系编排玩具：调参、观察、定格，把成果导出成一张矢量海报。</p>
+  </header>
+
+  <main class="layout">
+    <section class="stage-wrap" aria-labelledby="stage-heading">
+      <h2 id="stage-heading" class="sr-only">星图预览</h2>
+      <div id="stage" class="stage">
+        <!-- 不加 aria-hidden：内联 SVG 自带 role="img" + <title>/<desc>，需可供辅助技术读取 -->
+        <div id="preview" class="preview"></div>
+      </div>
+      <p class="stage-note">预览为实时 SVG；导出的海报是同一份几何的静态矢量文件，离线可开。</p>
+    </section>
+
+    <aside id="controls" class="panel" aria-labelledby="controls-heading">
+      <h2 id="controls-heading">参数</h2>
+      <p class="panel-hint">控件固定为 5 个，避免认知过载。所有参数即时生效。</p>
+
+      <div class="control">
+        <label for="ctrl-orbits">轨道数 <output id="out-orbits" for="ctrl-orbits">5条</output></label>
+        <input id="ctrl-orbits" type="range" min="3" max="9" step="1" value="5" aria-describedby="hint-orbits">
+        <p id="hint-orbits" class="hint">3–9 条，决定轨道层数与最大半径分布。</p>
+      </div>
+
+      <div class="control">
+        <label for="ctrl-eccentricity">离心率 <output id="out-eccentricity" for="ctrl-eccentricity">0.28</output></label>
+        <input id="ctrl-eccentricity" type="range" min="0" max="0.65" step="0.01" value="0.28" aria-describedby="hint-ecc">
+        <p id="hint-ecc" class="hint">0 为正圆，越大椭圆越扁。</p>
+      </div>
+
+      <div class="control">
+        <label for="ctrl-density">密度 <output id="out-density" for="ctrl-density">0.60</output></label>
+        <input id="ctrl-density" type="range" min="0.2" max="1" step="0.05" value="0.6" aria-describedby="hint-density">
+        <p id="hint-density" class="hint">控制每条轨道上的星体数量。</p>
+      </div>
+
+      <div class="control">
+        <label for="ctrl-tilt">倾角 <output id="out-tilt" for="ctrl-tilt">12度</output></label>
+        <input id="ctrl-tilt" type="range" min="-45" max="45" step="1" value="12" aria-describedby="hint-tilt">
+        <p id="hint-tilt" class="hint">-45° 至 45°，让各层轨道逐层偏转。</p>
+      </div>
+
+      <div class="control">
+        <label for="ctrl-palette">配色 <output id="out-palette" for="ctrl-palette">深蓝夜航</output></label>
+        <select id="ctrl-palette" aria-describedby="hint-palette">
+          <option value="0">深蓝夜航</option>
+          <option value="1">纸本星图</option>
+          <option value="2">无色高对比</option>
+        </select>
+        <p id="hint-palette" class="hint">三套自产配色，含一套无色高对比方案。</p>
+      </div>
+
+      <h2 class="subheading">操作</h2>
+      <div class="buttons">
+        <button id="btn-freeze" type="button" aria-pressed="false">定格</button>
+        <button id="btn-random" type="button">换一组参数</button>
+        <button id="btn-motion" type="button" aria-pressed="true">关闭公转</button>
+        <button id="btn-svg" type="button" class="primary">导出 SVG 海报</button>
+        <button id="btn-png" type="button" class="primary">导出 PNG 海报</button>
+        <button id="btn-share" type="button">复制分享链接</button>
+        <button id="btn-save-preset" type="button">保存参数预设</button>
+        <button id="btn-load-preset" type="button">载入参数预设</button>
+        <input id="file-preset" type="file" accept="application/json,.json" class="sr-only" tabindex="-1" aria-hidden="true">
+      </div>
+
+      <h2 class="subheading">当前星图</h2>
+      <dl class="stats">
+        <div><dt>轨道</dt><dd id="stat-orbits">—</dd></div>
+        <div><dt>星体</dt><dd id="stat-stars">—</dd></div>
+        <div><dt>种子</dt><dd id="stat-seed">—</dd></div>
+      </dl>
+      <p class="stats-note">同参数永远得到同一种子与同一张海报，可复现。</p>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>ORRERY / 星图 · 零依赖、零构建、零外部素材。玩法边界：<strong>无胜负、无进度、无账号</strong>，玩家自设目标。</p>
+    <p><a href="README.md">README</a> · <a href="docs/design.md">设计说明</a> · <a href="docs/architecture.md">架构说明</a> · <a href="ASSETS.md">素材与许可</a> · <a href="LICENSE">LICENSE</a></p>
+  </footer>
+
+  <script src="src/prng.js"></script>
+  <script src="src/params.js"></script>
+  <script src="src/palette.js"></script>
+  <script src="src/geometry.js"></script>
+  <script src="src/render.js"></script>
+  <script src="src/export.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

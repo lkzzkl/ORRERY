@@ -1,0 +1,25 @@
+{
+  "name": "orrery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ORRERY / 星图 — 无胜负的参数化星系编排玩具，导出可提交进仓库的矢量海报",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "posters": "node scripts/generate-posters.mjs",
+    "check": "npm test && npm run posters && npm run smoke && npm run check-assets",
+    "smoke": "node scripts/smoke.mjs",
+    "check-assets": "node scripts/check-assets.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "generative-art",
+    "svg",
+    "game",
+    "zero-dependency",
+    "no-build"
+  ]
+}
