@@ -180,7 +180,8 @@ body {
 .buttons button.primary:hover { background: #153c6b; }
 .buttons button:disabled { opacity: 0.55; cursor: progress; }
 
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; }
+/* 三列不等宽：seed 最长 10 位（4294967295），等宽三列会把它折成两行 */
+.stats { display: grid; grid-template-columns: 0.8fr 0.8fr 1.4fr; gap: 8px; margin: 0; }
 .stats div {
   background: var(--bg);
   border-radius: 8px;
@@ -194,6 +195,7 @@ body {
   font-variant-numeric: tabular-nums;
   overflow-wrap: anywhere;
 }
+#stat-seed { font-size: 15px; letter-spacing: -0.2px; }
 .stats-note { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
 
 .status {
